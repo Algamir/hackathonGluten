@@ -411,7 +411,7 @@ export default function Home() {
                     
                     <div className="grid grid-cols-2 gap-4 text-center">
                       <div className="bg-white p-4 rounded-xl shadow-sm">
-                        <div className="text-2xl font-black text-red-600 mb-1">4</div>
+                        <div className="text-2xl font-black text-red-600 mb-1">1</div>
                         <div className="text-xs text-slate-600">Restaurant 100% SG</div>
                       </div>
                       <div className="bg-white p-4 rounded-xl shadow-sm">
