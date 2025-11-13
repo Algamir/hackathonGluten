@@ -874,68 +874,189 @@ export default function Home() {
                   <div className="absolute left-4 top-1/2 transform -translate-y-1/2 -rotate-90 text-sm font-bold text-slate-600">Difficile d'accès</div>
                   <div className="absolute right-4 top-1/2 transform -translate-y-1/2 rotate-90 text-sm font-bold text-slate-600">Facile d'accès</div>
                   
-                  {/* Acteurs positionnés */}
-                  <div className="relative h-80">
-                    {/* Quadrant 1: Impact élevé + Facile accès */}
-                    <div className="absolute top-8 right-8 w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-transform cursor-pointer group">
-                      <div className="text-center">
+                  {/* Acteurs positionnés - Interactifs et déplaçables */}
+                  <div className="relative h-80 select-none" id="matrix-container">
+                    {/* Instructions */}
+                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-xs font-medium z-20">
+                      💡 Glissez les acteurs pour les repositionner
+                    </div>
+
+                    {/* Dr. Cellier */}
+                    <div 
+                      className="absolute w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-all cursor-move group draggable-actor z-10" 
+                      style={{top: '32px', right: '32px'}}
+                      data-actor="cellier"
+                    >
+                      <div className="text-center pointer-events-none">
                         <div className="text-lg">🩺</div>
                         <div className="text-xs">DC</div>
                       </div>
-                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">Dr. Cellier</div>
+                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Dr. Cellier</div>
                     </div>
                     
-                    <div className="absolute top-20 right-20 w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-transform cursor-pointer group">
-                      <div className="text-center">
+                    {/* Émilie */}
+                    <div 
+                      className="absolute w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-all cursor-move group draggable-actor z-10" 
+                      style={{top: '80px', right: '80px'}}
+                      data-actor="emilie"
+                    >
+                      <div className="text-center pointer-events-none">
                         <div className="text-lg">👥</div>
                         <div className="text-xs">EC</div>
                       </div>
-                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Émilie (Admin FB)</div>
+                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Émilie (Admin FB)</div>
                     </div>
 
-                    {/* Quadrant 2: Impact élevé + Difficile accès */}
-                    <div className="absolute top-8 left-8 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-transform cursor-pointer group">
-                      <div className="text-center">
+                    {/* Pr. Mion */}
+                    <div 
+                      className="absolute w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-all cursor-move group draggable-actor z-10" 
+                      style={{top: '32px', left: '32px'}}
+                      data-actor="mion"
+                    >
+                      <div className="text-center pointer-events-none">
                         <div className="text-lg">🏥</div>
                         <div className="text-xs">PM</div>
                       </div>
-                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">Pr. Mion</div>
+                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Pr. Mion</div>
                     </div>
 
-                    <div className="absolute top-20 left-20 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-transform cursor-pointer group">
-                      <div className="text-center">
+                    {/* Baptiste */}
+                    <div 
+                      className="absolute w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-all cursor-move group draggable-actor z-10" 
+                      style={{top: '80px', left: '80px'}}
+                      data-actor="baptiste"
+                    >
+                      <div className="text-center pointer-events-none">
                         <div className="text-lg">🥖</div>
                         <div className="text-xs">BB</div>
                       </div>
-                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Baptiste (COPAIN)</div>
+                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Baptiste (COPAIN)</div>
                     </div>
 
-                    <div className="absolute top-32 left-32 w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-transform cursor-pointer group">
-                      <div className="text-center">
+                    {/* Schär */}
+                    <div 
+                      className="absolute w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-all cursor-move group draggable-actor z-10" 
+                      style={{top: '128px', left: '128px'}}
+                      data-actor="schar"
+                    >
+                      <div className="text-center pointer-events-none">
                         <div className="text-lg">🏭</div>
                         <div className="text-xs">SC</div>
                       </div>
-                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">Schär</div>
+                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Schär</div>
                     </div>
 
-                    {/* Quadrant 3: Impact faible + Difficile accès */}
-                    <div className="absolute bottom-8 left-12 w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-transform cursor-pointer group">
-                      <div className="text-center">
+                    {/* Grégoire */}
+                    <div 
+                      className="absolute w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-all cursor-move group draggable-actor z-10" 
+                      style={{bottom: '32px', left: '48px'}}
+                      data-actor="gregoire"
+                    >
+                      <div className="text-center pointer-events-none">
                         <div className="text-lg">⚠️</div>
                         <div className="text-xs">GV</div>
                       </div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">Grégoire</div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Grégoire</div>
                     </div>
 
-                    {/* Quadrant 4: Impact faible + Facile accès */}
-                    <div className="absolute bottom-8 right-12 w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-transform cursor-pointer group">
-                      <div className="text-center">
+                    {/* Zoe */}
+                    <div 
+                      className="absolute w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg hover:scale-110 transition-all cursor-move group draggable-actor z-10" 
+                      style={{bottom: '32px', right: '48px'}}
+                      data-actor="zoe"
+                    >
+                      <div className="text-center pointer-events-none">
                         <div className="text-lg">📱</div>
                         <div className="text-xs">ZN</div>
                       </div>
-                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">Zoe NoGluten</div>
+                      <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Zoe NoGluten</div>
                     </div>
                   </div>
+
+                  {/* Script pour le drag & drop */}
+                  <script dangerouslySetInnerHTML={{
+                    __html: `
+                      (function() {
+                        let draggedElement = null;
+                        let initialX = 0;
+                        let initialY = 0;
+                        let offsetX = 0;
+                        let offsetY = 0;
+                        
+                        function initDragAndDrop() {
+                          const actors = document.querySelectorAll('.draggable-actor');
+                          const container = document.getElementById('matrix-container');
+                          
+                          if (!container) return;
+                          
+                          actors.forEach(actor => {
+                            actor.addEventListener('mousedown', handleMouseDown);
+                          });
+                          
+                          document.addEventListener('mousemove', handleMouseMove);
+                          document.addEventListener('mouseup', handleMouseUp);
+                        }
+                        
+                        function handleMouseDown(e) {
+                          e.preventDefault();
+                          draggedElement = e.currentTarget;
+                          
+                          const rect = draggedElement.getBoundingClientRect();
+                          const containerRect = document.getElementById('matrix-container').getBoundingClientRect();
+                          
+                          initialX = e.clientX - rect.left;
+                          initialY = e.clientY - rect.top;
+                          
+                          draggedElement.style.zIndex = '50';
+                          draggedElement.style.transform = 'scale(1.1)';
+                          draggedElement.style.boxShadow = '0 20px 40px rgba(0,0,0,0.3)';
+                        }
+                        
+                        function handleMouseMove(e) {
+                          if (!draggedElement) return;
+                          
+                          e.preventDefault();
+                          const container = document.getElementById('matrix-container');
+                          const containerRect = container.getBoundingClientRect();
+                          
+                          const newX = e.clientX - containerRect.left - initialX;
+                          const newY = e.clientY - containerRect.top - initialY;
+                          
+                          // Contraintes pour rester dans le container
+                          const maxX = containerRect.width - 64; // 64px = largeur de la bulle
+                          const maxY = containerRect.height - 64;
+                          
+                          const constrainedX = Math.max(0, Math.min(newX, maxX));
+                          const constrainedY = Math.max(0, Math.min(newY, maxY));
+                          
+                          draggedElement.style.left = constrainedX + 'px';
+                          draggedElement.style.top = constrainedY + 'px';
+                          draggedElement.style.right = 'auto';
+                          draggedElement.style.bottom = 'auto';
+                        }
+                        
+                        function handleMouseUp(e) {
+                          if (!draggedElement) return;
+                          
+                          draggedElement.style.zIndex = '10';
+                          draggedElement.style.transform = 'scale(1)';
+                          draggedElement.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+                          
+                          draggedElement = null;
+                        }
+                        
+                        // Initialiser quand le DOM est prêt
+                        if (document.readyState === 'loading') {
+                          document.addEventListener('DOMContentLoaded', initDragAndDrop);
+                        } else {
+                          initDragAndDrop();
+                        }
+                        
+                        // Réinitialiser si la page change (pour les SPA)
+                        setTimeout(initDragAndDrop, 100);
+                      })();
+                    `
+                  }} />
                 </div>
 
                 {/* Légende priorités */}
@@ -1560,6 +1681,17 @@ export default function Home() {
                 Les projections économiques sont basées sur des modèles existants et nécessitent une validation 
                 par étude de marché approfondie.
               </p>
+            </div>
+
+            {/* Bouton vers sources détaillées */}
+            <div className="mt-8 text-center">
+              <a 
+                href="/sources" 
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                📚 Voir toutes les sources détaillées
+                <span className="text-sm opacity-80">(16 établissements documentés)</span>
+              </a>
             </div>
 
             {/* Attribution */}
