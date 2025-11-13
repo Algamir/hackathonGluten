@@ -36,20 +36,7 @@ export default function MindMap() {
             <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
             <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-gradient-to-br from-green-500/15 to-emerald-500/15 rounded-full blur-2xl animate-pulse-slow transform -translate-x-1/2 -translate-y-1/2"></div>
             
-            {/* Lignes de connexion animées */}
-            <div className="absolute inset-0 pointer-events-none">
-              <svg className="w-full h-full opacity-10">
-                <defs>
-                  <linearGradient id="connectionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#ef4444" />
-                    <stop offset="50%" stopColor="#f97316" />
-                    <stop offset="100%" stopColor="#3b82f6" />
-                  </linearGradient>
-                </defs>
-                <path d="M50,50 Q200,100 400,200" stroke="url(#connectionGrad)" strokeWidth="2" fill="none" className="animate-pulse" />
-                <path d="M400,50 Q200,100 50,200" stroke="url(#connectionGrad)" strokeWidth="2" fill="none" className="animate-pulse" style={{animationDelay: '1s'}} />
-              </svg>
-            </div>          {/* Central Node */}
+          {/* Central Node */}
           <div className="relative z-10 flex flex-col items-center">
             {/* Main Central Circle */}
             <div className="relative mb-20 animate-scale-in">
@@ -82,11 +69,11 @@ export default function MindMap() {
                   </div>
                 </div>
                 
-                {/* Connection Lines avec animation */}
-                <div className="absolute -top-12 left-1/2 w-1 h-32 bg-gradient-to-t from-red-500 via-orange-400 to-transparent transform -translate-x-1/2 animate-pulse"></div>
-                <div className="absolute -bottom-12 left-1/2 w-1 h-32 bg-gradient-to-b from-red-500 via-orange-400 to-transparent transform -translate-x-1/2 animate-pulse" style={{animationDelay: '1s'}}></div>
-                <div className="absolute -left-12 top-1/2 h-1 w-32 bg-gradient-to-l from-red-500 via-orange-400 to-transparent transform -translate-y-1/2 animate-pulse" style={{animationDelay: '2s'}}></div>
-                <div className="absolute -right-12 top-1/2 h-1 w-32 bg-gradient-to-r from-red-500 via-orange-400 to-transparent transform -translate-y-1/2 animate-pulse" style={{animationDelay: '3s'}}></div>
+                {/* Connection Lines simplifiées */}
+                <div className="absolute -top-8 left-1/2 w-0.5 h-16 bg-gradient-to-t from-orange-300/50 to-transparent transform -translate-x-1/2"></div>
+                <div className="absolute -bottom-8 left-1/2 w-0.5 h-16 bg-gradient-to-b from-orange-300/50 to-transparent transform -translate-x-1/2"></div>
+                <div className="absolute -left-8 top-1/2 h-0.5 w-16 bg-gradient-to-l from-orange-300/50 to-transparent transform -translate-y-1/2"></div>
+                <div className="absolute -right-8 top-1/2 h-0.5 w-16 bg-gradient-to-r from-orange-300/50 to-transparent transform -translate-y-1/2"></div>
               </div>
             </div>
 
@@ -95,7 +82,6 @@ export default function MindMap() {
               
               {/* Branch 1: Le Problème (Top Left) */}
               <div className="relative">
-                <div className="absolute top-0 left-1/2 w-px h-16 bg-gradient-to-t from-red-400 to-transparent transform -translate-x-1/2 lg:-top-16"></div>
                 <Card className="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-300 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <CardContent className="p-8">
                     <div className="text-center mb-6">
@@ -141,7 +127,6 @@ export default function MindMap() {
 
               {/* Branch 2: Notre Vision (Top Right) */}
               <div className="relative">
-                <div className="absolute top-0 left-1/2 w-px h-16 bg-gradient-to-t from-blue-400 to-transparent transform -translate-x-1/2 lg:-top-16"></div>
                 <Card className="bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-blue-300 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <CardContent className="p-8">
                     <div className="text-center mb-6">
@@ -184,7 +169,6 @@ export default function MindMap() {
 
               {/* Branch 3: Les Solutions (Bottom Left) */}
               <div className="relative">
-                <div className="absolute -top-0 left-1/2 w-px h-16 bg-gradient-to-b from-green-400 to-transparent transform -translate-x-1/2 lg:top-0"></div>
                 <Card className="bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-300 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <CardContent className="p-8">
                     <div className="text-center mb-6">
@@ -229,7 +213,6 @@ export default function MindMap() {
 
               {/* Branch 4: L'Opportunité (Bottom Right) */}
               <div className="relative">
-                <div className="absolute -top-0 left-1/2 w-px h-16 bg-gradient-to-b from-purple-400 to-transparent transform -translate-x-1/2 lg:top-0"></div>
                 <Card className="bg-gradient-to-br from-purple-50 to-violet-100 border-2 border-purple-300 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
                   <CardContent className="p-8">
                     <div className="text-center mb-6">

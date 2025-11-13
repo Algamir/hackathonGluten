@@ -84,23 +84,23 @@ export default function SourcesPage() {
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white text-xl">🥖</div>
-                  <h2 className="text-2xl font-bold text-yellow-800">Copains (Lyon)</h2>
+                  <h2 className="text-2xl font-bold text-yellow-800">COPAINS (Lyon)</h2>
                 </div>
                 <div className="space-y-2 text-sm">
                   <a href="https://copains.co/nos-ecrins/lyon-3-cours-vitton/" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-800 underline">
                     • https://copains.co/nos-ecrins/lyon-3-cours-vitton/
                   </a>
                   <a href="https://copains.co/nos-ecrins/lyon-80-rue-president-edouard-herriot/" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-800 underline">
-                    • Copains - Lyon Rue Président Édouard Herriot
+                    • COPAINS - Lyon Rue Président Édouard Herriot
                   </a>
                   <a href="https://www.copains-paris.com/pages/nos-ecrins" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-800 underline">
                     • https://www.copains-paris.com/pages/nos-ecrins
                   </a>
                   <a href="https://www.ubereats.com/fr/store/boulangerie-copains-vitton/JbW0l8UEUcaUx1Jd0ifSFg" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-800 underline">
-                    • UberEats - Boulangerie Copains Vitton
+                    • UberEats - Boulangerie COPAINS Vitton
                   </a>
                   <a href="https://www.ubereats.com/fr/store/boulangerie-copains-herriot/Izkl5CR0XfKZUDO9wUVkPw" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-800 underline">
-                    • UberEats - Boulangerie Copains Herriot
+                    • UberEats - Boulangerie COPAINS Herriot
                   </a>
                   <a href="https://www.leprogres.fr/economie/2025/07/26/lyon-une-boulangerie-100-sans-gluten-ouvre-ses-portes" target="_blank" rel="noopener noreferrer" className="block text-blue-600 hover:text-blue-800 underline">
                     • Le Progrès - Article ouverture boulangerie
@@ -185,7 +185,7 @@ export default function SourcesPage() {
                 </div>
                 <p className="text-sm text-amber-700 leading-relaxed">
                   Cette compilation de sources a été réalisée en novembre 2025 par l'équipe PLESSIS LAGARDE Loréline, 
-                  CECILLON Marie, AZLOVIC Elmina et DUBOIS Sophie dans le cadre du Hackathon Innovation Sans Gluten. 
+                  CECILLON Marie, FAZLOVIC Elmina et DUBOIS Sophie dans le cadre du Hackathon Innovation Sans Gluten. 
                   Les informations sont regroupées par établissement avec validation croisée sur plusieurs plateformes 
                   (sites officiels, avis clients, plateformes de livraison). La carte collaborative permet une mise à jour 
                   continue par la communauté.

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -54,7 +55,7 @@ export default function Home() {
             
             <div className="animate-scale-in" style={{animationDelay: '0.8s'}}>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-8">
-                <a 
+                <Link 
                   href="/mindmap" 
                   className="group bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-2xl transition-all duration-500 hover:scale-110 text-lg relative overflow-hidden"
                 >
@@ -63,7 +64,7 @@ export default function Home() {
                     <span className="text-2xl animate-pulse">🧠</span>
                     <span>Voir la carte mentale</span>
                   </div>
-                </a>
+                </Link>
                 <div className="flex items-center gap-3 text-slate-600">
                   <div className="w-12 h-px bg-gradient-to-r from-transparent via-slate-400 to-transparent"></div>
                   <span className="text-sm font-medium">Pitch visuel en 10 secondes</span>
@@ -280,10 +281,10 @@ export default function Home() {
                       <p className="font-black text-red-700 text-sm mb-1">POST-DIAGNOSTIC</p>
                       <p className="text-xs text-red-800 font-bold mb-2">"Et maintenant je fais quoi ?"</p>
                       <ul className="text-xs space-y-1 text-red-700">
-                        <li>• Solitude informationnelle</li>
-                        <li>• Courses = 2h de scan</li>
-                        <li>• Peur du restaurant</li>
-                        <li>• Isolement social</li>
+                        <li>• Frustration continue</li>
+                        <li>• Charge mental</li>
+                        <li>• Anxiété</li>
+                        <li>• Restaurant non conforme</li>
                       </ul>
                     </div>
                   </div>
@@ -633,38 +634,14 @@ export default function Home() {
                     Écosystème Sans Gluten Lyon
                   </h3>
 
-                  {/* Central hub */}
+                  {/* Central hub - Version simplifiée */}
                   <div className="flex justify-center mb-12">
-                    <div className="relative">
-                      <div className="w-32 h-32 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-2xl animate-pulse-slow">
-                        <div className="text-center text-white">
-                          <div className="text-2xl mb-1">🎯</div>
-                          <div className="text-sm font-bold">ÉCOSYSTÈME</div>
-                          <div className="text-xs opacity-80">Sans Gluten</div>
-                        </div>
+                    <div className="w-32 h-32 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center shadow-2xl animate-pulse-slow">
+                      <div className="text-center text-white">
+                        <div className="text-2xl mb-1">🎯</div>
+                        <div className="text-sm font-bold">ÉCOSYSTÈME</div>
+                        <div className="text-xs opacity-80">Sans Gluten</div>
                       </div>
-                      
-                      {/* Connection lines */}
-                      <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{width: '800px', height: '600px', left: '-350px', top: '-250px'}}>
-                        <defs>
-                          <linearGradient id="connectionLine" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="#10b981" stopOpacity="0.8"/>
-                            <stop offset="100%" stopColor="#0d9488" stopOpacity="0.3"/>
-                          </linearGradient>
-                        </defs>
-                        
-                        {/* Lines to medical - Strong connections */}
-                        <line x1="400" y1="300" x2="200" y2="150" stroke="#10b981" strokeWidth="4" className="animate-pulse" opacity="0.8"/>
-                        <line x1="400" y1="300" x2="200" y2="250" stroke="#10b981" strokeWidth="4" className="animate-pulse" style={{animationDelay: '0.5s'}} opacity="0.8"/>
-                        
-                        {/* Lines to business - Mixed connections */}
-                        <line x1="400" y1="300" x2="600" y2="150" stroke="#f59e0b" strokeWidth="2" className="animate-pulse" style={{animationDelay: '1s'}} strokeDasharray="5,5"/>
-                        <line x1="400" y1="300" x2="600" y2="250" stroke="#10b981" strokeWidth="3" className="animate-pulse" style={{animationDelay: '1.5s'}}/>
-                        
-                        {/* Lines to community - Strong connections */}
-                        <line x1="400" y1="300" x2="300" y2="450" stroke="#10b981" strokeWidth="4" className="animate-pulse" style={{animationDelay: '2s'}} opacity="0.9"/>
-                        <line x1="400" y1="300" x2="500" y2="450" stroke="#10b981" strokeWidth="4" className="animate-pulse" style={{animationDelay: '2.5s'}} opacity="0.9"/>
-                      </svg>
                     </div>
                   </div>
 
@@ -771,7 +748,7 @@ export default function Home() {
                           </div>
                           <div>
                             <div className="font-bold text-orange-800 text-sm">Baptiste BORNE</div>
-                            <div className="text-xs text-orange-600">Fondateur COPAIN</div>
+                            <div className="text-xs text-orange-600">Fondateur COPAINS</div>
                           </div>
                         </div>
                         <div className="text-xs text-slate-600 bg-white/70 p-2 rounded space-y-1">
@@ -930,7 +907,7 @@ export default function Home() {
                         <div className="text-lg">🥖</div>
                         <div className="text-xs">BB</div>
                       </div>
-                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Baptiste (COPAIN)</div>
+                      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-black text-white px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Baptiste (COPAINS)</div>
                     </div>
 
                     {/* Schär */}
@@ -1102,9 +1079,24 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Modèle Copain :</strong> Seul succès commercial documenté</span>
+                      <span><strong>Modèle COPAINS :</strong> Seul succès commercial documenté</span>
                     </li>
                   </ul>
+                  
+                  {/* Explication concept COPAINS */}
+                  <div className="mt-4 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-orange-400 rounded-r-lg">
+                    <div className="flex items-start gap-3">
+                      <span className="text-2xl">🎨</span>
+                      <div>
+                        <div className="font-bold text-orange-700 text-sm mb-1">💡 CONCEPT COPAINS</div>
+                        <div className="text-xs text-orange-600 leading-relaxed">
+                          <strong>Concept store</strong> alliant <em>art de vivre et santé</em>.<br/>
+                          Design esthétique • Expérience premium • Files de 30min quotidiennes.<br/>
+                          <span className="text-orange-800 font-semibold">→ Preuve que le marché premium SG existe et prospère</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200">
@@ -1127,7 +1119,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span><strong>Benchmarking :</strong> Copain = modèle économique à adapter</span>
+                      <span><strong>Benchmarking :</strong> COPAINS = modèle économique à adapter</span>
                     </li>
                   </ul>
                 </div>
@@ -1138,91 +1130,7 @@ export default function Home() {
                 <div className="absolute top-0 left-0 w-32 h-32 bg-white/5 rounded-full -translate-y-16 -translate-x-16"></div>
                 <div className="absolute bottom-0 right-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 translate-x-12"></div>
                 
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-black text-center mb-8">🎯 Stratégie d'Activation du Réseau</h3>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
-                      <div className="text-3xl mb-3">🤝</div>
-                      <div className="font-bold mb-2">PHASE 1</div>
-                      <div className="text-sm opacity-80">Partenariats médicaux</div>
-                      <div className="text-xs opacity-60 mt-2">Légitimité + orientation patients</div>
-                    </div>
-                    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
-                      <div className="text-3xl mb-3">📢</div>
-                      <div className="font-bold mb-2">PHASE 2</div>
-                      <div className="text-sm opacity-80">Activation communauté</div>
-                      <div className="text-xs opacity-60 mt-2">Émilie + Zoe = early adopters</div>
-                    </div>
-                    <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center">
-                      <div className="text-3xl mb-3">🚀</div>
-                      <div className="font-bold mb-2">PHASE 3</div>
-                      <div className="text-sm opacity-80">Scale business model</div>
-                      <div className="text-xs opacity-60 mt-2">Learnings Copain + Grégoire</div>
-                    </div>
-                  </div>
-
-                  <Separator className="my-6 bg-white/20" />
-                  
-                  {/* Timeline d'activation */}
-                  <div className="mb-8">
-                    <h4 className="text-xl font-bold text-center text-white mb-6">🗓️ Timeline d'Activation (6 mois)</h4>
-                    
-                    <div className="relative">
-                      {/* Ligne de temps */}
-                      <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-white/30 transform -translate-x-1/2"></div>
-                      
-                      <div className="space-y-8">
-                        {/* Mois 1-2 */}
-                        <div className="flex items-center">
-                          <div className="w-1/2 pr-8 text-right">
-                            <div className="bg-white/20 p-4 rounded-lg">
-                              <div className="font-bold text-emerald-300">MOIS 1-2</div>
-                              <div className="text-sm">Rendez-vous Dr. Cellier + Émilie</div>
-                              <div className="text-xs opacity-70">Validation médicale + communauté</div>
-                            </div>
-                          </div>
-                          <div className="w-8 h-8 bg-emerald-400 rounded-full flex items-center justify-center text-white font-bold z-10 relative">1</div>
-                          <div className="w-1/2 pl-8"></div>
-                        </div>
-                        
-                        {/* Mois 3-4 */}
-                        <div className="flex items-center">
-                          <div className="w-1/2 pr-8"></div>
-                          <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold z-10 relative">2</div>
-                          <div className="w-1/2 pl-8">
-                            <div className="bg-white/20 p-4 rounded-lg">
-                              <div className="font-bold text-blue-300">MOIS 3-4</div>
-                              <div className="text-sm">Interview Grégoire + Benchmark Copain</div>
-                              <div className="text-xs opacity-70">Analyse échecs + modèle économique</div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        {/* Mois 5-6 */}
-                        <div className="flex items-center">
-                          <div className="w-1/2 pr-8 text-right">
-                            <div className="bg-white/20 p-4 rounded-lg">
-                              <div className="font-bold text-purple-300">MOIS 5-6</div>
-                              <div className="text-sm">Activation Zoe + Pr. Mion</div>
-                              <div className="text-xs opacity-70">Marketing + partenariat hospitalier</div>
-                            </div>
-                          </div>
-                          <div className="w-8 h-8 bg-purple-400 rounded-full flex items-center justify-center text-white font-bold z-10 relative">3</div>
-                          <div className="w-1/2 pl-8"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <Separator className="my-6 bg-white/20" />
-                  
-                  <p className="text-xl font-bold text-center">
-                    <span className="text-emerald-400">Réseau identifié</span> • 
-                    <span className="text-blue-400"> Stratégies validées</span> • 
-                    <span className="text-purple-400"> Partenariats prêts</span>
-                  </p>
-                </div>
+                
               </div>
             </div>
           </CardContent>
@@ -1429,7 +1337,7 @@ export default function Home() {
                     </li>
                     <li className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-orange-400">
                       <div className="font-bold text-orange-700 mb-1">Franchise boulangerie</div>
-                      <div className="text-xs text-slate-600">Copain fait 30min de queue - marché non saturé</div>
+                      <div className="text-xs text-slate-600">COPAINS fait 30min de queue - marché non saturé</div>
                     </li>
                   </ul>
                 </div>
@@ -1466,7 +1374,7 @@ export default function Home() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                     <div className="text-center">
                       <div className="text-3xl font-black text-yellow-300 mb-2">30 min</div>
-                      <div className="text-sm opacity-90">File d'attente chez <strong>Copain</strong></div>
+                      <div className="text-sm opacity-90">File d'attente chez <strong>COPAINS</strong></div>
                     </div>
                     <div className="text-center">
                       <div className="text-3xl font-black text-yellow-300 mb-2">0</div>
@@ -1621,7 +1529,7 @@ export default function Home() {
                     <p className="text-xs text-slate-600 mt-1">Messages privés • Novembre 2024</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-yellow-400">
-                    <p><strong>Baptiste BORNE</strong> - Fondateur COPAIN</p>
+                    <p><strong>Baptiste BORNE</strong> - Fondateur COPAINS</p>
                     <p className="text-xs text-slate-600 mt-1">Analyse modèle économique • Novembre 2024</p>
                   </div>
                   <div className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-amber-400">
@@ -1697,7 +1605,7 @@ export default function Home() {
             {/* Attribution */}
             <div className="mt-6 text-center">
               <p className="text-xs text-slate-500">
-                📋 <strong>Recherche & Analyse :</strong> PLESSIS LAGARDE Loréline - CECILLON Marie - AZLOVIC Elmina - DUBOIS Sophie • Hackathon Innovation Sans Gluten • 12 novembre 2025
+                📋 <strong>Recherche & Analyse :</strong> PLESSIS LAGARDE Loréline - CECILLON Marie - FAZLOVIC Elmina - DUBOIS Sophie • Hackathon Innovation Sans Gluten • 12 novembre 2025
               </p>
             </div>
           </CardContent>
