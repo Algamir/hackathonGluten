@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/hackathonGluten',
+  assetPrefix: '/hackathonGluten/',
   images: {
     unoptimized: true
   }
